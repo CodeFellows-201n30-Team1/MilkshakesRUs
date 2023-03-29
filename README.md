@@ -22,3 +22,8 @@ Jonathan Brooks <br>
 Sarah Mahdi <br>
 Zeegii Ulziibaatar<br>
 Brendan Duffy*
+
+
+## User Stories ##
+
+- a link to our project managment board https://app.asana.com/0/1204278230452331/board
