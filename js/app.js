@@ -10,6 +10,8 @@ let op4 = document.getElementById('op4');
 //global state array store the everything
 const state = {
   array:[],
+  currentQuestionIndex: 0,
+  selectedOptions: [],
 };
 
 //How are we displaying the questions?
@@ -39,29 +41,46 @@ let nonDairy = new Options('nonDairy');
 function renderImgs (){
   // let imgOne = state.array[0].image;
   // op1.src = imgOne;
-  op1.src = state.array[0].image;
-  op2.src = state.array[1].image;
+  op1.src = state.array[state.currentQuestionIndex].image;
+  op1.alt = state.array[state.currentQuestionIndex].name;
+  op2.src = state.array[state.currentQuestionIndex + 1].image;
+  op2.alt = state.array[state.currentQuestionIndex + 1].name;
 }
 
 function render(){
-  let newImages = renderImgs();
-  while (state.array.length<4){
-    if (handliClick()){
-      renderImgs();
-    }
-  }
-};
+//   let newImages = renderImgs();
+//   while (state.array.length<4){
+//     if (handliClick()){
+//       renderImgs();
+//     }
+//   }
+// };
+if (state.currentQuestionIndex < state.array.length - 1) {
+  renderImgs();
+} else {
+  console.log('Quiz finished');
+  console.log('Selected options:', state.selectedOptions);
+  // Display the result or move to another page.
+}
+}
+
 
 //add eventhandler
 function handleClick(event){ 
   let imgClicked = event.target.alt;
-  for(let i = 0; i < state.array.length; i++){
+  state.selectedOptions.push(imgClicked);
+   // Increment the current question index by 2 as there are 2 options per question
+   state.currentQuestionIndex += 2;
+render ();
+  // for(let i = 0; i < state.array.length; i++){
 
-  }
 }
 
 render();
 
 //add eventlistener
-containerElem.addEventListener('click', handleClick);
+
+op1.addEventListener('click', handleClick);
+op2.addEventListener('click', handleClick);
+// containerElem.addEventListener('click', handleClick);
 //show the result
