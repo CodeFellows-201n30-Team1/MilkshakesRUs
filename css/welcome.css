@@ -29,7 +29,7 @@
   
  }
 
- #page {
+ /* #page {
   color: black;
   background-color:#FEFF38;
   border: #F8F005 solid 10px;
@@ -40,7 +40,7 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
   border-radius: 40%;
- }
+ } */
 #welcome {
   margin-top: 4%;
   background-color: #4206F1;
@@ -78,6 +78,46 @@
   border-radius: 20%;
 }
 
+footer{
+  /* margin-top: 20px;
+  width: 95%;
+ 
+  /* position: fixed; */
+  width: 95%;
+  background-color: red;
+  color: white;
+  border: solid pink;
+  /* grid-column: 1/-1;
+  grid-row: 9/11; */
+  text-align: center;
+  background-color: pink;
+  font-family: 'Courier New', Courier, monospace;
+  height: 100px;
+  padding-top: 15px;
+  margin: auto;
+  }
+ 
+  .nav-logo {
+    display: flex;
+    /* border: 4px solid; */
+    justify-content: space-between;
+    background-color:#871A85;
+    height:150px;
+    } 
+    
+    .nav-logo img {
+    max-width: 20%;
+    margin-left: 100px;
+    }
+    
+    .nav-logo h1 {
+    font-size: 75px;
+    color:#a47d1a;
+    margin-top: 30px;
+    margin-left: 150px;
+    font-weight: bold;
+    }
+ 
 /* .footer {
   height:50px;
   margin-top:auto;
