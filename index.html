@@ -4,18 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets">
-  <!-- <link rel="stylesheet" href="/css/reset.css"> -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/welcome.css">
   <title>MilkShakesRUs</title>
 </head>
 <body>
-  <h1>Home</h1>
+  <header>
+  <h1 id="home">Welcome to MilkShakesRUs!</h1>
+ 
   <nav></nav>
-  <div> Welcome to MilkShakesRUs</div>
-  <header></header>
-  <footer>Contact Us</footer>
+</header>
+<div id="wrapper">
+  <div class="grid" id="welcome">
+    <a href="/welcome.html" id="page">
+      Welcome Page</a>
+  <img src="./assets/Milkshake's R US-logos_white.png" alt="Large logo of Milk Shakes are us." id="logo_on_welcome">
+  </div>
+  <div class="grid" id="welcomeText">
+    <p> Welcome to our milkshake recommendation website, where we provide a personalized experience for milkshake enthusiasts! We understand that everyone has different tastes and preferences when it comes to milkshakes, and our goal is to help you discover new and delicious options that suit your individual palate. </p>
+    <button class="button-49" role="button">LET'S START!</button>
+    <div id="list_container">
+    <ol id="lists">
+      <li>1. Choose the base you like 
+      </li> <br>
+      <li>2. Choose the flavor you enjoy</li> <br>
+      <li>3. Choose the toppings you like</li>
+    </ol>
+  </div>
+  </div>
+</div>
+  <footer class="footer">Contact Us</footer>
 </body>
 <script src="/js/app.js"></script>
-<a href="/welcome.html">Welcome Page</a>
+
 </html>
