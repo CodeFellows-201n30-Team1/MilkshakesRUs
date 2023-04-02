@@ -11,6 +11,8 @@ let imgThree = document.getElementById('op3');
 let imgFour = document.getElementById('op4');
 let questionLi = document.getElementById('questionList');
 
+
+
 // global state object to store everything
 const state = {
   currentQuestion: 0,
@@ -66,13 +68,34 @@ const question4 = new Question('What toppings do you like?', [
 // add questions to state
 state.questions.push(question1, question2, question3, question4);
 
-function handleClick(event){
+function handleClick(event) {
   let imgClicked = event.target.alt;
   state.selections.push(imgClicked);
   state.currentQuestion++;
+
+  for (let i = 0; i < state.questions.length; i++) {
+    const options = state.questions[i].options;
+
+    for (let j = 0; j < options.length; j++) {
+      state.totalCalories += options[j].calories;
+    }
+  }
+
   render();
+
 }
 
+  // Check if the user has clicked on the fourth image
+  if (state.currentQuestion === state.questions.length) {
+    clearQuiz();
+  }
+
+function clearQuiz() {
+  
+  const elements = document.querySelectorAll('*');
+  elements.remove();
+ 
+    };
 
 // render function - show the current question and its options
 function render() {
@@ -104,5 +127,9 @@ console.log(currentQuestion.question);
   }
 
   quiz.append(questionLi);
+
 }
+
+
 render();
+
