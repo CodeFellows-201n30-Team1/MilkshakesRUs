@@ -62,6 +62,9 @@ div {
 float:left;
 }
 
+.teamMember {
+    clear: both;
+}
 img {
     margin-right: 15px;
     height: 175px;
