@@ -43,6 +43,18 @@ Here is our wireframe: ![Wireframe](https://user-images.githubusercontent.com/12
 
 Here is our Domain Model: ![Domain Modeling](https://user-images.githubusercontent.com/121203064/228421065-42caaacd-f79e-4535-899e-c33ace7811b4.png)
 
-### REFERENCES
+## REFERENCES
+<!-- [title](https://www.example.com) -->
 
-https://getcssscan.com/css-buttons-examples
+### CSS
+[Beautiful CSS Button Examples](https://getcssscan.com/css-buttons-examples)
+
+### Accessibility
+[Accessibility Best Practices for Logos](https://www.w3.org/WAI/tutorials/images/decorative/)
+[Accessibility Best Practices for Buttons](https://www.searchenginejournal.com/alt-text-for-logos-and-buttons/469801/#close)
+[Accessibility Best Practices for Headshots](https://sc.edu/about/offices_and_divisions/digital-accessibility/guides_tutorials/alternative_text/headshot-alt-text/index.php)
+[Accessibility Trouble Shooting Best Practices](https://www.expandtheroom.com/insights/how-to-check-web-accessibility-with-a-screen-reader-and-keyboard/)
+[Download NVDA Screen Reader](https://www.nvaccess.org/download/)
+[NVDA Keyboard Shortcuts Guide](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
+[Skip Navigation Links Tutorial](https://webaim.org/techniques/skipnav/)
+[CSS in Action: Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/)
