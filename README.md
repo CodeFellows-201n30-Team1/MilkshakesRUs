@@ -45,6 +45,8 @@ Here is our Domain Model:<br>
 
 ![Domain Modeling](https://user-images.githubusercontent.com/121203064/228421065-42caaacd-f79e-4535-899e-c33ace7811b4.png)
 
+![Lighthouse Accessibility Score](assets/Lighthouse%20Accessibility%20Score.jpg)
+
 ## REFERENCES
 <!-- [title](https://www.example.com) -->
 
