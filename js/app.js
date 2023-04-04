@@ -75,34 +75,48 @@ function handleClick(event) {
 
   for (let i = 0; i < state.questions.length; i++) {
     const options = state.questions[i].options;
-
+    // const money = state.questions[i].money;
     for (let j = 0; j < options.length; j++) {
       state.totalCalories += options[j].calories;
+      // state.totalPrice += money[j].price;
     }
   }
+
+  // for (let l = 0; l < state.questions.length; l++) {
+  //   // const options = state.questions[i].options;
+  //   const money = state.questions[l].money;
+  //   for (let m = 0; m < money.length; m++) {
+  //     // state.totalCalories += options[j].calories;
+  //     state.totalPrice += money[m].price;
+  //   }
+  // }
 
   render();
 
 }
 
-  // Check if the user has clicked on the fourth image
+function handleShowResult(){
   if (state.currentQuestion === state.questions.length) {
     clearQuiz();
   }
+}
+// Check if the user has clicked on the fourth image
+
+
 
 function clearQuiz() {
-  
+
   const elements = document.querySelectorAll('*');
   elements.remove();
- 
-    };
+
+};
 
 // render function - show the current question and its options
 function render() {
- const currentQuestion = state.questions[state.currentQuestion];
+  const currentQuestion = state.questions[state.currentQuestion];
   questionLi.textContent = currentQuestion.question;
 
-console.log(currentQuestion.question);
+  console.log(currentQuestion.question);
 
 
   imgOne.src = `assets/${currentQuestion.options[0].imageSrc}`;
@@ -121,13 +135,12 @@ console.log(currentQuestion.question);
   imgFour.alt = currentQuestion.options[3].imageSrc.split('.')[0];
   imgFour.addEventListener('click', handleClick);
 
-
   while (quiz.firstChild) {
     quiz.removeChild(quiz.firstChild);
   }
 
   quiz.append(questionLi);
-
+  handleShowResult();
 }
 
 
