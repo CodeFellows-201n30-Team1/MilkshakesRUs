@@ -1,24 +1,29 @@
 body {
     background-color:rgb(249, 252, 252);
+    padding:0; 
+    margin: 0;
+    box-sizing: border-box;
 }
 .nav-logo {
 display: flex;
-border: 4px solid;
 justify-content: space-between;
 background-color:black;
 height:150px;
+
 } 
 
 .nav-logo img {
-max-width: 20%;
+/* max-width: 20%; */
 margin-left: 100px;
+height:120px;
+margin-top: auto;
 }
 
 .nav-logo h1 {
-font-size: 75px;
+font-size: 60px;
 color:#a47d1a;
-margin-top: 30px;
-margin-left: 150px;
+margin-top: 50px;
+margin-left: 250px;
 font-weight: bold;
 }
 
@@ -30,19 +35,25 @@ font-size: 40px;
 .button {
 border: 1px solid black;
 border-radius: 10px;
+width: 8%;
 padding: 10px;
-font-size: 20px;
+margin: 4px 2px;
+font-size: 1vw;
 height: 20px;
-margin: 1%;
-}
 
+}
 a {
-text-decoration: none;
+text-decoration:none;
 font-family: Georgia, 'Times New Roman', Times, serif;
-background-color: #f4fbf3;
+background-color: #e9ede8;
 color: #a47d1a;
 font-weight: bold;
+text-align: center;
+cursor:pointer;
+
 }
+
+
 
 .aboutSection {
 width: 50%;
@@ -63,20 +74,20 @@ float:left;
 }
 
 .teamMember {
-    clear: both;
+clear: both;
 }
 img {
-    margin-right: 15px;
-    height: 175px;
-    width: 160px;
+margin-right: 15px;
+height: 175px;
+ width: 160px;
 }
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
 }
 
 
