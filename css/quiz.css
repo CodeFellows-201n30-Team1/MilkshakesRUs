@@ -1,5 +1,5 @@
 body {
-  background-color:rgb(249, 252, 252);
+  background-color:lightgray;
   padding:0; 
   margin: 0;
   box-sizing: border-box;
@@ -90,7 +90,8 @@ text-align: center;
 }
 
 .questions{
-border: solid green;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* border: solid green; */
 grid-column: 1/-1;
 grid-row: 4/5;
 text-align: center;
@@ -98,41 +99,58 @@ font-size: 50px;
 }
 
 .containerElem{
-border: solid green;
+/* border: solid green; */
 grid-column: 1/-1;
 grid-row: 5/6;
 text-align: center;
 }
 #questions {
-  background-color: rgb(189, 210, 228);
+  /* background-color: rgb(189, 210, 228); */
 }
 
 .op1{
-border: solid lightblue;
+/* border: solid lightblue; */
 grid-column: 1/3;
 grid-row: 6/9;
 text-align: center;
+}
+
+.op1 img{
+  border-radius: 50%;
 }
 
 .op2{
-border: solid rebeccapurple;
+/* border: solid 5px rebeccapurple; */
+background-color: lightgrey;
 grid-column: 3/-1;
 grid-row: 6/9;
 text-align: center;
 }
 
+.op2 img{
+  border-radius: 50%;
+}
+
 .op3{
-border: solid turquoise;
+/* border: solid turquoise; */
 grid-column: 1/3;
 grid-row: 9/12;
 text-align: center;
 }
 
+.op3 img{
+  border-radius: 50%;
+}
+
 .op4{
-border: solid orange;
+/* border: solid orange; */
 grid-column: 3/-1;
 grid-row: 9/12;
 text-align: center;
+}
+
+.op4 img{
+  border-radius: 50%;
 }
 
 /* footer{

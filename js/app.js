@@ -134,10 +134,12 @@ function render() {
   imgFour.src = `assets/${currentQuestion.options[3].imageSrc}`;
   imgFour.alt = currentQuestion.options[3].imageSrc.split('.')[0];
   imgFour.addEventListener('click', handleClick);
-
+  
+  console.log(quiz.firstChild);
   while (quiz.firstChild) {
     quiz.removeChild(quiz.firstChild);
   }
+  console.log(quiz.firstChild);
 
   quiz.append(questionLi);
   handleShowResult();
