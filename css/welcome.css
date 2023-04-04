@@ -1,3 +1,57 @@
+body {
+  background-color:rgb(249, 252, 252);
+  padding:0; 
+  margin: 0;
+  box-sizing: border-box;
+}
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  background-color:black;
+  height:150px;
+  
+  } 
+  
+  .nav-logo img {
+  /* max-width: 20%; */
+  margin-left: 100px;
+  height:120px;
+  margin-top: auto;
+  }
+  
+  .nav-logo h1 {
+  font-size: 60px;
+  color:#a47d1a;
+  margin-top: 50px;
+  margin-left: 250px;
+  font-weight: bold;
+  }
+  
+  h2 {
+  text-align: center;
+  font-size: 40px;
+  }
+
+  .button {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 8%;
+  padding: 10px;
+  margin: 4px 2px;
+  font-size: 1vw;
+  height: 20px;
+      
+  }  
+  a {
+  text-decoration:none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #e9ede8;
+  color: #a47d1a;
+  font-weight: bold;
+  text-align: center;
+  cursor:pointer;
+  }
+
 #wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,12 +74,13 @@
   margin-top: 2%;
   border-radius: 30%;
 }
- p{
+ p {
   text-align: end;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  margin-right: 200px;
+  margin-right: 60px;
   margin-top: 10%;
+  text-align: center;
   
  }
 
@@ -48,6 +103,7 @@
   width: 800px;
   margin-left: 50px;
   border-radius: 20%;
+  margin-bottom: 40px;
 }
 
 #logo_on_welcome {
@@ -60,22 +116,23 @@
   text-align: end;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
-  margin-right: 200px;
+  margin-right: 100px;
   margin-top: 10%;
   color: aliceblue;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 #welcomeText {
   line-height: 30px;
+
   
 }
-
 
 #list_container {
   background-color: #871A85;
   height: 200px;
   border-radius: 20%;
+
 }
 
 footer{
@@ -83,40 +140,19 @@ footer{
   width: 95%;
  
   /* position: fixed; */
-  width: 95%;
-  background-color: red;
-  color: white;
-  border: solid pink;
+  /* width: 95%; */
+  /* background-color: red; */
+  color: rgb(10, 10, 10);
+  border: solid black 0.5px;
   /* grid-column: 1/-1;
   grid-row: 9/11; */
   text-align: center;
-  background-color: pink;
+  background-color: rgb(173, 190, 175);
   font-family: 'Courier New', Courier, monospace;
   height: 100px;
   padding-top: 15px;
   margin: auto;
-  }
- 
-  .nav-logo {
-    display: flex;
-    /* border: 4px solid; */
-    justify-content: space-between;
-    background-color:#871A85;
-    height:150px;
-    } 
-    
-    .nav-logo img {
-    max-width: 20%;
-    margin-left: 100px;
-    }
-    
-    .nav-logo h1 {
-    font-size: 75px;
-    color:#a47d1a;
-    margin-top: 30px;
-    margin-left: 150px;
-    font-weight: bold;
-    }
+}
  
 /* .footer {
   height:50px;
