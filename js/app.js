@@ -11,6 +11,8 @@ let imgThree = document.getElementById('op3');
 let imgFour = document.getElementById('op4');
 let questionLi = document.getElementById('questionList');
 
+
+
 // global state object to store everything
 const state = {
   currentQuestion: 0,
@@ -66,20 +68,55 @@ const question4 = new Question('What toppings do you like?', [
 // add questions to state
 state.questions.push(question1, question2, question3, question4);
 
-function handleClick(event){
+function handleClick(event) {
   let imgClicked = event.target.alt;
   state.selections.push(imgClicked);
   state.currentQuestion++;
+
+  for (let i = 0; i < state.questions.length; i++) {
+    const options = state.questions[i].options;
+    // const money = state.questions[i].money;
+    for (let j = 0; j < options.length; j++) {
+      state.totalCalories += options[j].calories;
+      // state.totalPrice += money[j].price;
+    }
+  }
+
+  // for (let l = 0; l < state.questions.length; l++) {
+  //   // const options = state.questions[i].options;
+  //   const money = state.questions[l].money;
+  //   for (let m = 0; m < money.length; m++) {
+  //     // state.totalCalories += options[j].calories;
+  //     state.totalPrice += money[m].price;
+  //   }
+  // }
+
   render();
+
 }
 
+function handleShowResult(){
+  if (state.currentQuestion === state.questions.length) {
+    clearQuiz();
+  }
+}
+// Check if the user has clicked on the fourth image
+
+
+
+function clearQuiz() {
+
+  const elements = document.querySelectorAll('*');
+  elements.remove();
+
+};
 
 // render function - show the current question and its options
 function render() {
- const currentQuestion = state.questions[state.currentQuestion];
+  const currentQuestion = state.questions[state.currentQuestion];
   questionLi.textContent = currentQuestion.question;
 
-console.log(currentQuestion.question);
+  console.log(currentQuestion.question);
 
 
   imgOne.src = `assets/${currentQuestion.options[0].imageSrc}`;
@@ -98,11 +135,14 @@ console.log(currentQuestion.question);
   imgFour.alt = currentQuestion.options[3].imageSrc.split('.')[0];
   imgFour.addEventListener('click', handleClick);
 
-
   while (quiz.firstChild) {
     quiz.removeChild(quiz.firstChild);
   }
 
   quiz.append(questionLi);
+  handleShowResult();
 }
+
+
 render();
+
