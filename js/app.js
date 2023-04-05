@@ -2,9 +2,6 @@
 
 // window to the DOM
 let quiz = document.getElementById('questions');
-let containerElem = document.getElementById('containerElem');
-let calorieCount = document.getElementById('calories');
-let priceElem = document.getElementById('price');
 let imgOne = document.getElementById('op1');
 let imgTwo = document.getElementById('op2');
 let imgThree = document.getElementById('op3');
@@ -65,43 +62,61 @@ const question4 = new Question('What toppings do you like?', [
   new Option('Caramel Syrup','caramelSyrup.jpg', 70, 1),
 ]);
 
-// add questions to state
+// add questions to the state
 state.questions.push(question1, question2, question3, question4);
 
 function handleClick(event) {
   let imgClicked = event.target.alt;
   state.selections.push(imgClicked);
   state.currentQuestion++;
+  console.log(imgClicked);
+
+
 
   for (let i = 0; i < state.questions.length; i++) {
-    const options = state.questions[i].options;
+    let options = state.questions[i].options;
     for (let j = 0; j < options.length; j++) {
-      state.totalCalories += options[j].calories;
+      if (imgClicked === options[j].name) {
+        state.totalCalories += options[j].calories;
+        state.totalPrice += options[j].price;
+      }
     }
   }
-  console.log(state.totalCalories);
+  //longer array access to see if the loop is calling the right name
+  // for (let i=0; i<state.questions.length; i++){
+  //   // const options = state.questions[i];
+  //   console.log(state.questions[i].options[i].name);
+
+  //   if (imgClicked === state.questions[i].options[i].name){
+  //     console.log('inside if statement ');
+  //     state.totalCalories += state.questions[i].options[i].calories;
+  //     state.totalPrice += state.questions[i].options[i].price;
+  //   } console.log(state.totalCalories);
+  // }
+
+  console.log(state);
+
+
   if (state.selections.length >= 4){
     const modal = document.getElementById('modal');
     const modalImage = document.getElementById('modal-image');
     const closeButton = document.querySelector('.close');
     const calculatedCalorie = document.getElementById('modal-text');
 
-    calculatedCalorie.textContent = 'According to the ingredients you chose, we recommend this Milkshake for you! Hope you enjoy it!';
+    calculatedCalorie.textContent = `According to the ingredients you chose, we recommend this Milkshake for you! Hope you enjoy it! The total calories for this milkshake is ${state.totalCalories}, and the price is $${state.totalPrice}`;
     console.log(state.totalCalories);
     // Add the calorie display to the modal
 
-
     let imageSource = '';
-    if (state.selections.includes('chocolate')){
+    if (state.selections.includes('Chocolate')){
       imageSource = 'assets/chocolatemilkshake.jpg';
-    } else if (state.selections.includes('strawberry')){
+    } else if (state.selections.includes('Strawberry')){
       imageSource = 'assets/strawberryMilkshake.jpg';
-    } else if (state.selections.includes('vanila')){
+    } else if (state.selections.includes('Vanila')){
       imageSource = 'assets/vanillamilkshake.jpg';
-    }else if (state.selections.includes('matcha')){
+    }else if (state.selections.includes('Matcha')){
       imageSource = 'assets/matchaMilkshake.jpg';
     }
-
 
     const imageAlt = 'Image description';
     modalImage.src = imageSource;
@@ -112,44 +127,43 @@ function handleClick(event) {
 
     console.log(state.totalCalories);
     // Hide the modal when the close button is clicked
-    closeButton.addEventListener('click', () => {
+    closeButton.addEventListener('click', function() {
       modal.style.display = 'none';
     });
 
     // Hide the modal when the user clicks outside of it
-    window.addEventListener('click', (event) => {
+    window.addEventListener('click', function(event) {
       if (event.target === modal) {
         modal.style.display = 'none';
       }
     });
+
   } else {
     render();
   }
 }
-
 
 // render function - show the current question and its options
 function render() {
   const currentQuestion = state.questions[state.currentQuestion];
   questionLi.textContent = currentQuestion.question;
 
-  console.log(currentQuestion.question);
-
+  // console.log(currentQuestion.question);
 
   imgOne.src = `assets/${currentQuestion.options[0].imageSrc}`;
-  imgOne.alt = currentQuestion.options[0].imageSrc.split('.')[0];
+  imgOne.alt = currentQuestion.options[0].name.split('.')[0];
   imgOne.addEventListener('click', handleClick);
 
   imgTwo.src = `assets/${currentQuestion.options[1].imageSrc}`;
-  imgTwo.alt = currentQuestion.options[1].imageSrc.split('.')[0];
+  imgTwo.alt = currentQuestion.options[1].name.split('.')[0];
   imgTwo.addEventListener('click', handleClick);
 
   imgThree.src = `assets/${currentQuestion.options[2].imageSrc}`;
-  imgThree.alt = currentQuestion.options[2].imageSrc.split('.')[0];
+  imgThree.alt = currentQuestion.options[2].name.split('.')[0];
   imgThree.addEventListener('click', handleClick);
 
   imgFour.src = `assets/${currentQuestion.options[3].imageSrc}`;
-  imgFour.alt = currentQuestion.options[3].imageSrc.split('.')[0];
+  imgFour.alt = currentQuestion.options[3].name.split('.')[0];
   imgFour.addEventListener('click', handleClick);
 
   while (quiz.firstChild) {

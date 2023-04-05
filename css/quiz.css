@@ -226,9 +226,11 @@ margin: auto;
   justify-content: center;
   align-items: center;
   border-radius: 30%;
+  margin-left: 2%;
 }
 #modal-text{
   color:white;
   font-size: 30px;
   text-align: center;
+  margin-left: 2%;
 }
