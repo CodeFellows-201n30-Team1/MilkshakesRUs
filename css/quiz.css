@@ -1,5 +1,5 @@
 body {
-  background-color:lightgray;
+  background-color:#EEF1FF;
   padding:0; 
   margin: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@ body {
 .nav-logo {
   display: flex;
   justify-content: space-between;
-  background-color:black;
+  background-color:#AAC4FF;
   height:150px;
   
   } 
@@ -21,7 +21,7 @@ body {
   
   .nav-logo h1 {
   font-size: 60px;
-  color:#a47d1a;
+  color:whitesmoke;
   margin-top: 50px;
   margin-left: 250px;
   font-weight: bold;
@@ -47,14 +47,19 @@ body {
   a {
   text-decoration:none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #e9ede8;
-  color: #a47d1a;
+  background-color: #B1B2FF;
+  color: whitesmoke;
   font-weight: bold;
   text-align: center;
   cursor:pointer;
 
   }
-    
+
+  canvas {
+    position: fixed;
+    width:100%;
+    height:100%;
+  }
   
 main{
   display: grid;
@@ -121,7 +126,7 @@ text-align: center;
 
 .op2{
 /* border: solid 5px rebeccapurple; */
-background-color: lightgrey;
+
 grid-column: 3/-1;
 grid-row: 6/9;
 text-align: center;
@@ -167,9 +172,13 @@ footer{
 color: rgb(10, 10, 10);
 border: solid black 0.5px;
 text-align: center;
-background-color: rgb(173, 190, 175);
+background-color: #AAC4FF;
 font-family: 'Courier New', Courier, monospace;
 height: 100px;
 padding-top: 15px;
 margin: auto;
 }
+
+footer a{
+  background-color: #AAC4FF;
+ }

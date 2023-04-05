@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(249, 252, 252);
+    background-color:#EEF1FF;
     padding:0; 
     margin: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@ body {
 .nav-logo {
 display: flex;
 justify-content: space-between;
-background-color:black;
+background-color:#AAC4FF;
 height:150px;
 
 } 
@@ -21,7 +21,7 @@ margin-top: auto;
 
 .nav-logo h1 {
 font-size: 60px;
-color:#a47d1a;
+color:whitesmoke;
 margin-top: 50px;
 margin-left: 250px;
 font-weight: bold;
@@ -45,8 +45,8 @@ height: 20px;
 a {
 text-decoration:none;
 font-family: Georgia, 'Times New Roman', Times, serif;
-background-color: #e9ede8;
-color: #a47d1a;
+background-color: #B1B2FF;
+color: whitesmoke;
 font-weight: bold;
 text-align: center;
 cursor:pointer;
@@ -60,7 +60,7 @@ width: 50%;
 margin: auto;
 position: relative;
 top: 30px;
-background-color: rgba(162, 161, 157, 0.351);
+background-color: #B1B2FF;
 border-radius: 25px;
 padding: 20px;
 font-family:Georgia, 'Times New Roman', Times, serif;
