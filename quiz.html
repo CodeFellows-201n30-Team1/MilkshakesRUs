@@ -12,23 +12,26 @@
 <body>
   
   <header>
+    <div id="skiptocontent"><a href="#questions">skip to main content</a></div>
     <nav>
-      <div class ="nav-logo">
 
-      <img src="/assets/logo.png" alt ="milkshakesrus log" >
+      <div class ="nav-logo">
+      <img src="/assets/logo.png" alt ="Milkshakes R Us logo" >
       <h1>MilkShakesRUs</h1>
-      <img src="/assets/logo.png" alt ="milkshakesrus log" >
-      <a href="/index.html" class ="button">Home</a>
-      <a href="/AboutUs.html" class="button">About US</a>
-      <a href="/quiz.html" class ="button">Quiz Page</a>
+      <img src="/assets/logo.png" alt ="Milkshakes R Us logo" >
+      <a href="/index.html" class ="button" alt="Home">Home</a>
+      <a href="/AboutUs.html" class="button" alt="About Us">About US</a>
+      <a href="/quiz.html" class ="button" alt="Quiz Page">Quiz Page</a>
    </div>
     </nav>
   </header>
   <canvas id="confeti" width="300" height="300" class="active"></canvas>
+  <button id="show-modal" onClick="window.location.reload();">Start Over</button>
   <main>
     <section class="questions" id="questions">
-      <p id="questionList" ></p>
+      <p id="questionList" ></p> 
     </section>
+    
     <div class="op1"><p id="label"></p>
       <img style="height: 494px; width: 504px;" id="op1" src="" alt="">
       <p></p>
@@ -48,29 +51,37 @@
     <!-- <div>Recommended product will show up</div> -->
   </main>
 
-  <footer>Visit Us Online and at a mall near you!
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-image" src="" alt="">
+      <p id="modal-text"></p>
+    </div>
+  </div>
+  <footer>Visit Us Online and at a mall near you
     <div class="footer">
       <Address>3200 Las Vegas Blvd S Ste. 600, Las Vegas, NV 89109</Address>
       <a href="https://www.facebook.com/MITCSAIL/videos/rick-roll/175310064147000/">
-      <img src="/assets/icons8-facebook-50.png" alt="">
+      <img src="/assets/icons8-facebook-50.png" alt="Facebook">
       </a>
       <a href="https://bit.ly/3BlS71b">
-      <img src="/assets/icons8-github-50.png" alt="">
+      <img src="/assets/icons8-github-50.png" alt="GitHub">
       </a>
       <a href="https://www.instagram.com/p/BgSlRglAKBn/?hl=en">
-      <img src="/assets/icons8-instagram-50.png" alt="">
+      <img src="/assets/icons8-instagram-50.png" alt="Instagram">
       </a>
       <a href="https://www.reddit.com/r/rickroll/comments/lm3jji/rickroll_in_hd/">
-      <img src="/assets/icons8-reddit-50.png" alt="">
+      <img src="/assets/icons8-reddit-50.png" alt="Reddit">
       </a>
       <a href="https://twitter.com/MIT_CSAIL/status/1363172815315214336?lang=en">
-      <img src="/assets/icons8-twitter-50.png" alt="">
+      <img src="/assets/icons8-twitter-50.png" alt="Twitter">
       </a>
       <a href="https://www.tiktok.com/@bethany968/video/6819175216736931077?lang=en">
-      <img src="/assets/icons8-tiktok-50.png" alt="">
+      <img src="/assets/icons8-tiktok-50.png" alt="TikTok">
       </a>
       <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <img src="/assets/icons8-youtube-50.png" alt="">
+        <img src="/assets/icons8-youtube-50.png" alt="YouTube">
       </a>
     </div>
   </footer>

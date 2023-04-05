@@ -4,6 +4,31 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+/* #skiptocontent a {
+  padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	border-bottom-right-radius:10px;
+	background:linear-gradient(45deg, transparent 5%, #FF013C 5%);
+	-webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+
+#skiptocontent a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+} */
+
 .nav-logo {
   display: flex;
   justify-content: space-between;
@@ -154,19 +179,10 @@ grid-row: 9/12;
 text-align: center;
 }
 
+
 .op4 img{
   border-radius: 50%;
 }
-
-/* footer{
-width: 95%;
-margin: auto;
-border: solid pink;
-grid-column: 1/-1;
-grid-row: 9/12;
-text-align: center;
-
-} */
 
 footer{
 color: rgb(10, 10, 10);
@@ -179,6 +195,97 @@ padding-top: 15px;
 margin: auto;
 }
 
+
 footer a{
   background-color: #AAC4FF;
  }
+
+/* modal CSS */
+
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#show-modal{
+
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: auto;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#show-modal:hover,
+#show-modal:focus {
+  background-color: #F082AC;
+}
+
+#modal-image{
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%;
+  margin-left: 2%;
+}
+#modal-text{
+  color:white;
+  font-size: 30px;
+  text-align: center;
+  margin-left: 2%;
+}
+
