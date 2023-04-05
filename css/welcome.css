@@ -1,5 +1,5 @@
 body {
-  background-color:rgb(249, 252, 252);
+  background-color:#EEF1FF;
   padding:0; 
   margin: 0;
   box-sizing: border-box;
@@ -32,7 +32,7 @@ body {
 .nav-logo {
   display: flex;
   justify-content: space-between;
-  background-color:black;
+  background-color:#AAC4FF;
   height:150px;
   
   } 
@@ -46,7 +46,7 @@ body {
   
   .nav-logo h1 {
   font-size: 60px;
-  color:#a47d1a;
+  color:whitesmoke;
   margin-top: 50px;
   margin-left: 250px;
   font-weight: bold;
@@ -70,8 +70,8 @@ body {
   a {
   text-decoration:none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #e9ede8;
-  color: #a47d1a;
+  background-color:#B1B2FF;
+  color: whitesmoke;
   font-weight: bold;
   text-align: center;
   cursor:pointer;
@@ -123,7 +123,7 @@ body {
  } */
 #welcome {
   margin-top: 4%;
-  background-color: #4206F1;
+  background-color: #4AAC4FF1;
   height: 800px;
   width: 800px;
   margin-left: 50px;
@@ -154,7 +154,7 @@ body {
 }
 
 #list_container {
-  background-color: #871A85;
+  background-color: #B1B2FF;
   height: 200px;
   border-radius: 20%;
 
@@ -172,13 +172,15 @@ footer{
   /* grid-column: 1/-1;
   grid-row: 9/11; */
   text-align: center;
-  background-color: rgb(173, 190, 175);
+  background-color: #AAC4FF;
   font-family: 'Courier New', Courier, monospace;
   height: 100px;
   padding-top: 15px;
   margin: auto;
 }
- 
+ footer a{
+  background-color: #AAC4FF;
+ }
 /* .footer {
   height:50px;
   margin-top:auto;
@@ -198,7 +200,7 @@ footer{
   line-height: 78px;
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  background: linear-gradient(45deg, transparent 5%, #AAC4FF 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
@@ -218,14 +220,16 @@ footer{
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
   
-  content: 'Button to start the options';
+
+  content: 'Press Play';
+
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #EEF1FF 5%);
   text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
   clip-path: var(--slice-0);
 }
