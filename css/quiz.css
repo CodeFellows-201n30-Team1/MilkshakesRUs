@@ -225,6 +225,7 @@ margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 30%;
 }
 #modal-text{
   color:white;

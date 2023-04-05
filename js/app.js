@@ -79,27 +79,38 @@ function handleClick(event) {
       state.totalCalories += options[j].calories;
     }
   }
-  
+  console.log(state.totalCalories);
   if (state.selections.length >= 4){
     const modal = document.getElementById('modal');
     const modalImage = document.getElementById('modal-image');
     const closeButton = document.querySelector('.close');
-    // const calculatedCalorie = document.getElementById('modal-calorie');
+    const calculatedCalorie = document.getElementById('modal-text');
+
+    calculatedCalorie.textContent = 'According to the ingredients you chose, we recommend this Milkshake for you! Hope you enjoy it!';
+    console.log(state.totalCalories);
+    // Add the calorie display to the modal
+
 
     let imageSource = '';
     if (state.selections.includes('chocolate')){
-      imageSource = 'assets/chocolate.jpg';
-    } else {
-      imageSource = 'assets/ube.jpg';
+      imageSource = 'assets/chocolatemilkshake.jpg';
+    } else if (state.selections.includes('strawberry')){
+      imageSource = 'assets/strawberryMilkshake.jpg';
+    } else if (state.selections.includes('vanila')){
+      imageSource = 'assets/vanillamilkshake.jpg';
+    }else if (state.selections.includes('matcha')){
+      imageSource = 'assets/matchaMilkshake.jpg';
     }
+
+
     const imageAlt = 'Image description';
     modalImage.src = imageSource;
     modalImage.alt = imageAlt;
 
     // Show the modal when the image is clicked
     modal.style.display = 'block';
-    // calculatedCalorie.textContent = `Total Calorie for this Milkshake is ${state.totalCalories}`;
-    // calculatedCalorie.modal.style.display = 'inline';
+
+    console.log(state.totalCalories);
     // Hide the modal when the close button is clicked
     closeButton.addEventListener('click', () => {
       modal.style.display = 'none';
