@@ -46,7 +46,7 @@ const question1 = new Question('What base do you like?', [
 
 const question2 = new Question('What flavor do you prefer?', [
   new Option('Vanila','vanila.jpg', 200, 2),
-  new Option('Choclate','chocolate.jpg', 250, 2.5),
+  new Option('Chocolate','chocolate.jpg', 250, 2.5),
   new Option('Strawberry','strawberry.jpg', 180, 3),
   new Option('Matcha','matcha.jpg', 220, 4),
 ]);
@@ -82,41 +82,51 @@ function handleClick(event) {
     }
   }
 
-  if (state.currentQuestion === 4){
+  if (state.currentQuestion >= 4){
 
-    const showModalButton = document.getElementById("show-modal");
-const modal = document.getElementById("modal");
-const modalContent = document.querySelector(".modal-content");
-const modalImage = document.getElementById("modal-image");
-const closeButton = document.querySelector(".close");
+    const showModalButton = document.getElementById('show-modal');
+    const modal = document.getElementById('modal');
+    // const modalContent = document.querySelector(".modal-content");
+    const modalImage = document.getElementById('modal-image');
+    const closeButton = document.querySelector('.close');
+    const modalText = document.getElementById('modal-text');
 
-// Show the modal when the button is clicked
-showModalButton.addEventListener("click", () => {
-  modal.style.display = "block";
-});
+    // Show the modal when the button is clicked
 
-// Hide the modal when the close button is clicked
-closeButton.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+    showModalButton.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
 
-// Hide the modal when the user clicks outside of it
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
+    // Hide the modal when the close button is clicked
+    closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
 
-// Set the image source and display it in the modal when clicked
-const imageSource = "assets/pineapple.jpg";
-const imageAlt = "Image description";
-modalImage.src = imageSource;
-modalImage.alt = imageAlt;
-modalImage.addEventListener("click", () => {
-  modal.style.display = "block";
-});
+    // Hide the modal when the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
 
-    console.log(('fourth question'));
+    // Set the image source and display it in the modal when clicked
+    //loop through the state.selections and show the image according to the user choice
+    let imageSource = '';
+    if (state.selections.includes('chocolate')){
+      imageSource = 'assets/chocolate.jpg';
+    }else {
+      imageSource = 'assets/ube.jpg';
+    }
+    const imageAlt = 'Image description';
+    modalImage.src = imageSource;
+    modalImage.alt = imageAlt;
+    modalText.modal.style.display = 'inline';
+    modalImage.addEventListener('click', () => {
+      modal.style.display = 'block';
+    });
+    // modalText.addEventListener('click', () => {
+    //   modal.style.display = 'block';
+    // });
   } else{
     render();}
 

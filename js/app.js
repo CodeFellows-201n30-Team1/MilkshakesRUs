@@ -75,61 +75,47 @@ function handleClick(event) {
 
   for (let i = 0; i < state.questions.length; i++) {
     const options = state.questions[i].options;
-    // const money = state.questions[i].money;
     for (let j = 0; j < options.length; j++) {
       state.totalCalories += options[j].calories;
-      // state.totalPrice += money[j].price;
     }
   }
+  
+  if (state.selections.length >= 4){
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modal-image');
+    const closeButton = document.querySelector('.close');
+    // const calculatedCalorie = document.getElementById('modal-calorie');
 
-  if (state.currentQuestion === 4){
+    let imageSource = '';
+    if (state.selections.includes('chocolate')){
+      imageSource = 'assets/chocolate.jpg';
+    } else {
+      imageSource = 'assets/ube.jpg';
+    }
+    const imageAlt = 'Image description';
+    modalImage.src = imageSource;
+    modalImage.alt = imageAlt;
 
-    const showModalButton = document.getElementById("show-modal");
-const modal = document.getElementById("modal");
-const modalContent = document.querySelector(".modal-content");
-const modalImage = document.getElementById("modal-image");
-const closeButton = document.querySelector(".close");
+    // Show the modal when the image is clicked
+    modal.style.display = 'block';
+    // calculatedCalorie.textContent = `Total Calorie for this Milkshake is ${state.totalCalories}`;
+    // calculatedCalorie.modal.style.display = 'inline';
+    // Hide the modal when the close button is clicked
+    closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
 
-// Show the modal when the button is clicked
-showModalButton.addEventListener("click", () => {
-  modal.style.display = "block";
-});
-
-// Hide the modal when the close button is clicked
-closeButton.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-// Hide the modal when the user clicks outside of it
-window.addEventListener("click", (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
+    // Hide the modal when the user clicks outside of it
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  } else {
+    render();
   }
-});
-
-// Set the image source and display it in the modal when clicked
-//loop through the state.selections
-let imageSource = ''
-  if (state.selections.includes('chocolate')){
-    imageSource = 'assets/chocolate.jpg';
-  }else {
-    imageSource = 'assets/ube.jpg';
-  }
-
-
-// const imageSource = "assets/pineapple.jpg";
-const imageAlt = 'Image description';
-modalImage.src = imageSource;
-modalImage.alt = imageAlt;
-modalImage.addEventListener("click", () => {
-  modal.style.display = "block";
-});
-
-    console.log(('fourth question'));
-  } else{
-    render();}
-
 }
+
 
 // render function - show the current question and its options
 function render() {
@@ -165,4 +151,3 @@ function render() {
 
 
 render();
-

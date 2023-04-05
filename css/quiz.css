@@ -135,16 +135,6 @@ grid-row: 9/12;
 text-align: center;
 }
 
-/* footer{
-width: 95%;
-margin: auto;
-border: solid pink;
-grid-column: 1/-1;
-grid-row: 9/12;
-text-align: center;
-
-} */
-
 footer{
 color: rgb(10, 10, 10);
 border: solid black 0.5px;
@@ -156,9 +146,8 @@ padding-top: 15px;
 margin: auto;
 }
 
-
 /* modal CSS */
-/* CSS code */
+
 .modal {
   display: none; /* Hide the modal by default */
   position: fixed; /* Stay in place */
@@ -228,4 +217,17 @@ margin: auto;
 #show-modal:hover,
 #show-modal:focus {
   background-color: #F082AC;
+}
+
+#modal-image{
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal-text{
+  color:white;
+  font-size: 30px;
+  text-align: center;
 }
