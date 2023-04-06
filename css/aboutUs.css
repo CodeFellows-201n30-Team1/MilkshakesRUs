@@ -82,37 +82,34 @@ cursor:pointer;
 
 .aboutSection {
 width: 50%;
-margin: auto;
-position: relative;
-top: 30px;
+margin:auto;
+margin-top:40px;
+margin-bottom: 20px;
+position:relative;
 background-color: #B1B2FF;
 border-radius: 25px;
-padding: 20px;
+padding: 25px;
 font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-div {
-    display: block;
-}
+
 .team {
 float:left;
 }
 
+
+
 .teamMember {
 clear: both;
-}
-img {
-margin-right: 15px;
-height: 175px;
- width: 160px;
+margin-bottom: 70px;
 }
 
-p {
-display: block;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
+img {
+margin-right: 15px;
+height: 160px;
+width: 160px;
+
 }
+
 
 
