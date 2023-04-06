@@ -105,20 +105,25 @@ function handleClick(event) {
     const closeButton = document.querySelector('.close');
     const calculatedCalorie = document.getElementById('modal-text');
 
-    calculatedCalorie.textContent = `According to the ingredients you chose, we recommend this Milkshake for you! Hope you enjoy it! The total calories for this milkshake is ${state.totalCalories}, and the price is $${state.totalPrice}`;
+    let imageSource = '';
+    let shakeName = '';
+    if (state.selections.includes('Chocolate')){
+      imageSource = 'assets/chocolatemilkshake.jpg';
+      shakeName = 'CHOCOLATE MILKSHAKE';
+    } else if (state.selections.includes('Strawberry')){
+      imageSource = 'assets/strawberryMilkshake.jpg';
+      shakeName = 'STRAWBERRY MILKSHAKE';
+    } else if (state.selections.includes('Vanila')){
+      imageSource = 'assets/vanillamilkshake.jpg';
+      shakeName = 'VANILLA MILKSHAKE';
+    }else if (state.selections.includes('Matcha')){
+      imageSource = 'assets/matchaMilkshake.jpg';
+      shakeName = 'MATCHA MILKSHAKE';
+    }
+    calculatedCalorie.textContent = `According to the ingredients you chose, we recommend ${shakeName} for you! Hope you enjoy it! The total calories for this milkshake is ${state.totalCalories}, and the price is $${state.totalPrice}`;
     console.log(state.totalCalories);
     // Add the calorie display to the modal
 
-    let imageSource = '';
-    if (state.selections.includes('Chocolate')){
-      imageSource = 'assets/chocolatemilkshake.jpg';
-    } else if (state.selections.includes('Strawberry')){
-      imageSource = 'assets/strawberryMilkshake.jpg';
-    } else if (state.selections.includes('Vanila')){
-      imageSource = 'assets/vanillamilkshake.jpg';
-    }else if (state.selections.includes('Matcha')){
-      imageSource = 'assets/matchaMilkshake.jpg';
-    }
 
     const imageAlt = 'Image description';
     modalImage.src = imageSource;
@@ -168,11 +173,11 @@ function render() {
   imgFour.alt = currentQuestion.options[3].name.split('.')[0];
   imgFour.addEventListener('click', handleClick);
 
-  console.log(quiz.firstChild);
+
   while (quiz.firstChild) {
     quiz.removeChild(quiz.firstChild);
   }
-  console.log(quiz.firstChild);
+
 
   quiz.append(questionLi);
 
