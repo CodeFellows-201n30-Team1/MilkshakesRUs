@@ -98,7 +98,7 @@ function handleClick(event) {
       imageSource = 'assets/chocolatemilkshake.jpg';
       shakeName = 'CHOCOLATE MILKSHAKE';
     } else if (state.selections.includes('Strawberry')){
-      imageSource = 'assets/strawberryMilkshake.jpg';
+      imageSource = 'assets/StrawberryMilkshake.jpg';
       shakeName = 'STRAWBERRY MILKSHAKE';
     } else if (state.selections.includes('Vanila')){
       imageSource = 'assets/vanillamilkshake.jpg';
