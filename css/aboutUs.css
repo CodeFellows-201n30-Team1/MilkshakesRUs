@@ -78,7 +78,9 @@ cursor:pointer;
 
 }
 
-
+a:hover{
+	background-color: #F082AC
+}
 
 .aboutSection {
 width: 50%;

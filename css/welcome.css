@@ -57,6 +57,12 @@ body {
   font-size: 40px;
   }
 
+  canvas {
+    position: fixed;
+    width:100%;
+    height:100%;
+  }
+
   .button {
   border: 1px solid black;
   border-radius: 10px;
@@ -75,6 +81,10 @@ body {
   font-weight: bold;
   text-align: center;
   cursor:pointer;
+  }
+
+  a:hover{
+    background-color: #F082AC
   }
 
 #wrapper {
@@ -237,6 +247,13 @@ footer{
 .button-49:hover:after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
+}
+.button-50{
+  background-color: #EEF1FF;
+}
+
+.button-50:hover{
+  background-color: #EEF1FF
 }
 
 @keyframes glitch {
