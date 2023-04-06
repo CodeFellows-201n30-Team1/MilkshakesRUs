@@ -52,7 +52,7 @@ const question2 = new Question('What flavor do you prefer?', [
 
 const question3 = new Question('What size do you want?', [
   new Option('Small', 'small.jpg', 150, 2.5),
-  new Option('Medium', 'medium.jpg', 200, 3),
+  new Option('Medium', 'Medium.jpg', 200, 3),
   new Option('Large', 'large.jpg', 250, 3.5),
   new Option('Extra Large', 'xlarge.jpg', 300, 4),
 ]);
