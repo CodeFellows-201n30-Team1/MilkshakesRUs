@@ -84,19 +84,6 @@ function handleClick(event) {
       }
     }
   }
-  //longer array access to see if the loop is calling the right name
-  // for (let i=0; i<state.questions.length; i++){
-  //   // const options = state.questions[i];
-  //   console.log(state.questions[i].options[i].name);
-
-  //   if (imgClicked === state.questions[i].options[i].name){
-  //     console.log('inside if statement ');
-  //     state.totalCalories += state.questions[i].options[i].calories;
-  //     state.totalPrice += state.questions[i].options[i].price;
-  //   } console.log(state.totalCalories);
-  // }
-
-  console.log(state);
 
 
   if (state.selections.length >= 4){
@@ -155,7 +142,6 @@ function render() {
   const currentQuestion = state.questions[state.currentQuestion];
   questionLi.textContent = currentQuestion.question;
 
-  // console.log(currentQuestion.question);
 
   imgOne.src = `assets/${currentQuestion.options[0].imageSrc}`;
   imgOne.alt = currentQuestion.options[0].name.split('.')[0];
